@@ -10,62 +10,65 @@
     tools:layout_editor_absoluteY="0dp"
     tools:showIn="@layout/activity_fillin_form">
 
-
     <LinearLayout
         android:id="@+id/layout_email_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:orientation="vertical"
         android:padding="10dp"
-
-
-        android:layout_centerInParent="true"
-        android:weightSum="1"
-        >
+        android:weightSum="1">
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/edLocationName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@mipmap/ic_launcher"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:padding="10dp"
-            android:textColorHint="#bbbbbb"
-            android:ellipsize="end"/>
-
-        <EditText
-            android:id="@+id/field_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@mipmap/ic_launcher"
-
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:padding="10dp"
-            android:textColorHint="#bbbbbb"
             android:ellipsize="end"
-            android:layout_weight="2.86" />
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColorHint="#bbbbbb" />
+
+        <EditText
+            android:id="@+id/edLocationName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.86"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:ellipsize="end"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColorHint="#bbbbbb" />
+
+        <EditText
+            android:id="@+id/edLocationName3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.86"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:ellipsize="end"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:textColorHint="#bbbbbb" />
 
     </LinearLayout>
-
 
     <Button
         android:id="@+id/btGoToMap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:padding="10dp"
-        android:text="Go to MAP"
+        android:text="Go to Map"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        android:layout_marginTop="10dp"/>
-
-
-
+        tools:layout_editor_absoluteY="0dp" />
 
 </android.support.constraint.ConstraintLayout>

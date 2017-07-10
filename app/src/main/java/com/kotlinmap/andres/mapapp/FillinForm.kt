@@ -8,10 +8,9 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import com.google.android.gms.maps.model.LatLng
-
 import kotlinx.android.synthetic.main.activity_fillin_form.*
 import kotlinx.android.synthetic.main.content_fillin_form.*
-import org.jetbrains.anko.*
+import org.jetbrains.anko.toast
 import java.io.IOException
 
 class FillinForm : AppCompatActivity() {
@@ -28,18 +27,39 @@ class FillinForm : AppCompatActivity() {
 
 
         btGoToMap.setOnClickListener {
-            val locationName1 = editText.text.toString()
-            val x = getLocationFromAddress(this, locationName1)
+            //Get location1
+            val locationName = edLocationName.text.toString()
+            val coordinates = getLocationFromAddress(this, locationName)
 
-            toast("andres " + "lat " + x!!.latitude + ", long :" + x!!.longitude)
+//            toast("andres " + "lat " + coordinates!!.latitude + ", long :" + coordinates!!.longitude)
 //            if (locationName1 == "") {
 //                toast("setLat(): " + locationName1)
 //            }
+
+            //Get location2
+            val locationName2 = edLocationName2.text.toString()
+            val coordinates2 = getLocationFromAddress(this, locationName2)
+
+            //Get location2
+            val locationName3 = edLocationName3.text.toString()
+            val coordinates3 = getLocationFromAddress(this, locationName3)
+
+            // Start map activity
             val i = Intent(this@FillinForm, MapsActivity::class.java)
-//            i.putExtra("lat", 37.773972)
-            i.putExtra("name", locationName1)
-            i.putExtra("lat", x.latitude.toString())
-            i.putExtra("long", x.longitude.toString())
+            // i.putExtra("lat", 37.773972)
+            i.putExtra("name", locationName)
+            i.putExtra("lat", coordinates!!.latitude.toString())
+            i.putExtra("long", coordinates.longitude.toString())
+
+            //location 2
+            i.putExtra("name2", locationName)
+            i.putExtra("lat2", coordinates2!!.latitude.toString())
+            i.putExtra("long2", coordinates2.longitude.toString())
+
+            //location 3
+            i.putExtra("name3", locationName)
+            i.putExtra("lat3", coordinates3!!.latitude.toString())
+            i.putExtra("long3", coordinates3.longitude.toString())
 
             startActivity(i)
         }
@@ -82,5 +102,4 @@ class FillinForm : AppCompatActivity() {
 
         return resLatLng
     }
-
 }

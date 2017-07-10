@@ -38,20 +38,33 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
 
-
+        //location 1
         val name = intent.getStringExtra("name")
-        val lat = intent.getStringExtra("lat")
-        val long = intent.getStringExtra("long")
+        val lat = intent.getStringExtra("lat").toDouble()
+        val long = intent.getStringExtra("long").toDouble()
 
-        val latD = lat.toDouble()
-        val longD = long.toDouble()
-        // val lat = intent.getDoubleExtra("lat",0.0)
-        toast("getLat(): " + lat + " -- " + long)
+        //location 2
+        val name2 = intent.getStringExtra("name2")
+        val lat2 = intent.getStringExtra("lat2").toDouble()
+        val long2 = intent.getStringExtra("long2").toDouble()
+
+
+        //location 1
+        val name3 = intent.getStringExtra("name3")
+        val lat3 = intent.getStringExtra("lat3").toDouble()
+        val long3 = intent.getStringExtra("long3").toDouble()
 
         // Add a marker in SF and move the camera
         // val SF = LatLng(37.773972, -122.431297)
-        val SF = LatLng(latD, longD)
-        mMap.addMarker(MarkerOptions().position(SF).title(name))
+        val location1 = LatLng(lat, long)
+        val location2 = LatLng(lat2, long2)
+        val location3 = LatLng(lat3, long3)
+
+
+        mMap.addMarker(MarkerOptions().position(location1).title(name))
+        mMap.addMarker(MarkerOptions().position(location2).title(name2))
+        mMap.addMarker(MarkerOptions().position(location3).title(name3))
+
 
         //on maeker click opens new activity
         mMap.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
@@ -62,7 +75,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 return false //true don't show  marker title
             }
         })
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(SF))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(location1))
     }
 
 
