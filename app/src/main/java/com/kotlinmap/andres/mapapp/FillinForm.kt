@@ -27,7 +27,7 @@ class FillinForm : AppCompatActivity() {
 //        }
 
 
-        helloMe.setOnClickListener {
+        btGoToMap.setOnClickListener {
             val locationName1 = editText.text.toString()
             val x = getLocationFromAddress(this, locationName1)
 

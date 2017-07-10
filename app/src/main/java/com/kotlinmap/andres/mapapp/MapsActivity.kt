@@ -1,22 +1,16 @@
 package com.kotlinmap.andres.mapapp
 
-import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-
+import android.support.v7.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
-import android.content.Intent
-import android.location.Address
 import com.google.android.gms.maps.model.Marker
+import com.google.android.gms.maps.model.MarkerOptions
 import org.jetbrains.anko.toast
-import android.widget.Toast
-import android.location.Geocoder
-import java.io.IOException
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -45,27 +39,25 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
 
+        val name = intent.getStringExtra("name")
         val lat = intent.getStringExtra("lat")
         val long = intent.getStringExtra("long")
 
         val latD = lat.toDouble()
         val longD = long.toDouble()
-//        val lat = intent.getDoubleExtra("lat",0.0)
+        // val lat = intent.getDoubleExtra("lat",0.0)
         toast("getLat(): " + lat + " -- " + long)
 
-//        TODO
-//        not able to get double from previous activity...
-
         // Add a marker in SF and move the camera
-//        val SF = LatLng(37.773972, -122.431297)
+        // val SF = LatLng(37.773972, -122.431297)
         val SF = LatLng(latD, longD)
-        mMap.addMarker(MarkerOptions().position(SF).title("Work in SF"))
+        mMap.addMarker(MarkerOptions().position(SF).title(name))
 
         //on maeker click opens new activity
         mMap.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
             override fun onMarkerClick(marker: Marker): Boolean {
                 val i = Intent(this@MapsActivity, FillinForm::class.java)
-//                i.putExtra("name", "andres")
+                // i.putExtra("name", "andres")
                 startActivity(i)
                 return false //true don't show  marker title
             }
