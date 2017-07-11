@@ -7,6 +7,7 @@ import android.location.Geocoder
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.widget.EditText
 import com.google.android.gms.maps.model.LatLng
 import kotlinx.android.synthetic.main.activity_fillin_form.*
 import kotlinx.android.synthetic.main.content_fillin_form.*
@@ -48,26 +49,41 @@ class FillinForm : AppCompatActivity() {
             val i = Intent(this@FillinForm, MapsActivity::class.java)
             // i.putExtra("lat", 37.773972)
             i.putExtra("name", locationName)
-            i.putExtra("lat", coordinates!!.latitude.toString())
-            i.putExtra("long", coordinates.longitude.toString())
+            i.putExtra("lat", coordinates?.latitude.toString())
+            i.putExtra("long", coordinates?.longitude.toString())
 
             //location 2
-            i.putExtra("name2", locationName)
-            i.putExtra("lat2", coordinates2!!.latitude.toString())
-            i.putExtra("long2", coordinates2.longitude.toString())
+            i.putExtra("name2", locationName2)
+            i.putExtra("lat2", coordinates2?.latitude.toString() )
+            i.putExtra("long2", coordinates2?.longitude.toString() )
 
             //location 3
-            i.putExtra("name3", locationName)
-            i.putExtra("lat3", coordinates3!!.latitude.toString())
-            i.putExtra("long3", coordinates3.longitude.toString())
+            i.putExtra("name3", locationName3)
+            i.putExtra("lat3", coordinates3?.latitude.toString())
+            i.putExtra("long3", coordinates3?.longitude.toString())
 
-            startActivity(i)
+//            if (locationName == null|| locationName2 == null || locationName3 ==null) {
+            if (!checkTextLength(edLocationName) || !checkTextLength(edLocationName2)|| !checkTextLength(edLocationName3))
+                toast("Fields cannot be empty!")
+            else
+                startActivity(i)
         }
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
+        // comment out FAB
+//        fab.setOnClickListener { view ->
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show()
+//        }
+
+
+    }
+
+    fun checkTextLength(editText: EditText): Boolean {
+        var length = editText.length()
+        if (length > 0)
+            return true
+        else
+            return false
     }
 
     fun getLocationFromAddress(context: Context, inputtedAddress: String): LatLng? {
@@ -90,7 +106,7 @@ class FillinForm : AppCompatActivity() {
             val location = address[0]
             location.getLatitude()
             location.getLongitude()
-            toast("location " + location.getLatitude() + location.getLongitude())
+//            toast("location " + location.getLatitude() + location.getLongitude())
 
             resLatLng = LatLng(location.getLatitude(), location.getLongitude())
 

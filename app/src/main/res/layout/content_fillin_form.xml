@@ -11,7 +11,7 @@
     tools:showIn="@layout/activity_fillin_form">
 
     <LinearLayout
-        android:id="@+id/layout_email_password"
+        android:id="@+id/form_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -19,48 +19,80 @@
         android:padding="10dp"
         android:weightSum="1">
 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mom:"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+             />
+
+
         <EditText
+            android:layout_below="@+id/textView1"
             android:id="@+id/edLocationName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableLeft="@mipmap/ic_launcher"
             android:ellipsize="end"
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:padding="10dp"
+            android:hint="Mountain view CA"
             android:textColorHint="#bbbbbb" />
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:text="Dad:"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
         <EditText
+            android:layout_below="@+id/textView2"
             android:id="@+id/edLocationName2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2.86"
-            android:drawableLeft="@mipmap/ic_launcher"
             android:ellipsize="end"
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:padding="10dp"
+            android:hint="San Jose CA "
             android:textColorHint="#bbbbbb" />
 
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:text="You: "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
         <EditText
+            android:layout_below="@+id/textView3"
             android:id="@+id/edLocationName3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2.86"
-            android:drawableLeft="@mipmap/ic_launcher"
             android:ellipsize="end"
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:padding="10dp"
+            android:hint="San Francisco CA"
             android:textColorHint="#bbbbbb" />
 
     </LinearLayout>
 
     <Button
         android:id="@+id/btGoToMap"
+        android:layout_below="@+id/form_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="70dp"
         android:padding="10dp"
         android:text="Go to Map"
         android:textAllCaps="false"
@@ -70,5 +102,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
+
 
 </android.support.constraint.ConstraintLayout>

@@ -10,7 +10,6 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
-import org.jetbrains.anko.toast
 
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
@@ -39,17 +38,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         //location 1
+        //default "Mountain view CA"
         val name = intent.getStringExtra("name")
         val lat = intent.getStringExtra("lat").toDouble()
         val long = intent.getStringExtra("long").toDouble()
 
         //location 2
+        //default "San Jose CA"
         val name2 = intent.getStringExtra("name2")
         val lat2 = intent.getStringExtra("lat2").toDouble()
         val long2 = intent.getStringExtra("long2").toDouble()
 
 
-        //location 1
+        //location 3
+        //default San Francisco CA
         val name3 = intent.getStringExtra("name3")
         val lat3 = intent.getStringExtra("lat3").toDouble()
         val long3 = intent.getStringExtra("long3").toDouble()
@@ -75,6 +77,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 return false //true don't show  marker title
             }
         })
+
         mMap.moveCamera(CameraUpdateFactory.newLatLng(location1))
     }
 
