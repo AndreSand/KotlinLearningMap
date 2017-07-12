@@ -1,10 +1,10 @@
 # KotlinLearningMap
 
 ##Demo
-<img src='XYZ.gif' title='Enter info: ' width='' alt='Enter info: ' />
+<img src='XYZ.png' title='Enter info: ' width='' alt='Enter info: ' />
 
 
-<img src='XYZmap.gif' title='Map shows born locations' width='' alt='Map shows born locations' />
+<img src='XYZmap.png' title='Map shows born locations' width='' alt='Map shows born locations' />
 
 ###Code
 
