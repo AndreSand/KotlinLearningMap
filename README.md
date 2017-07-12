@@ -1,12 +1,14 @@
 # KotlinLearningMap
 
-##Demo
+## Demo
+
+## Enter info:
 <img src='XYZ.png' title='Enter info: ' width='' alt='Enter info: ' />
 
+## Map shows born locations:
+<img src='XYZmap.png' title='Map shows born locations: ' width='' alt='Map shows born locations' />
 
-<img src='XYZmap.png' title='Map shows born locations' width='' alt='Map shows born locations' />
-
-###Code
+## Code
 
 I'm using Android Studio 3.0, Kotlin, and gradle 4.0
 
@@ -14,7 +16,7 @@ I'm using Android Studio 3.0, Kotlin, and gradle 4.0
 - Kotlin and Anko
 - Geocoder [gets location(lat, long) from address]
 
-#Resources
+## Resources
 map kotlin tutorial:
 https://www.mytrendin.com/draw-route-two-locations-google-maps-using-kotlin-android/
 
