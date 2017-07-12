@@ -10,11 +10,11 @@
 
 ## Code
 
-I'm using Android Studio 3.0, Kotlin, and gradle 4.0
+Using Android Studio 3.0, Kotlin, and gradle 4.0
 
 - Google Maps API
 - Kotlin and Anko
-- Geocoder [gets location(lat, long) from address]
+- Geocoder (gets lat and long location from address) example: val SF = LatLng(37.773972, -122.431297)
 
 ## Resources
 map kotlin tutorial:
@@ -25,3 +25,9 @@ https://github.com/pot8os/Kotlin-Espresso-sample
 https://fernandocejas.com/2017/02/03/android-testing-with-kotlin/
 https://github.com/android10/Android-KotlinInTests
 https://www.youtube.com/watch?v=_f-qkGJBPts
+
+common views:
+https://drive.google.com/file/d/0B5XIkMkayHgRMVljUVIyZzNmQUU/view
+
+screenshot and share:
+http://www.androhub.com/take-a-screenshot-programmatically-in-android/
