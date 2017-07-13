@@ -38,7 +38,7 @@
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:padding="10dp"
-            android:hint="Mountain view CA"
+            android:hint="was born in?"
             android:textColorHint="#bbbbbb" />
 
         <TextView
@@ -61,7 +61,7 @@
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:padding="10dp"
-            android:hint="San Jose CA "
+            android:hint="was born in?"
             android:textColorHint="#bbbbbb" />
 
         <TextView
@@ -82,7 +82,7 @@
             android:inputType="textEmailAddress"
             android:maxLines="1"
             android:padding="10dp"
-            android:hint="San Francisco CA"
+            android:hint="was born in?"
             android:textColorHint="#bbbbbb" />
 
     </LinearLayout>
@@ -94,6 +94,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:padding="10dp"
+        android:background="#00AA8D"
+        android:textColor="#ffffff"
         android:text="Go to Map"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="parent"

@@ -31,3 +31,6 @@ https://drive.google.com/file/d/0B5XIkMkayHgRMVljUVIyZzNmQUU/view
 
 screenshot and share:
 http://www.androhub.com/take-a-screenshot-programmatically-in-android/
+
+material colors:
+https://material.io/guidelines/style/color.html#color-color-palette
