@@ -13,7 +13,7 @@
     tools:context="com.kotlinmap.andres.mapapp.MapsActivity" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/bShare"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#00AA8D"
