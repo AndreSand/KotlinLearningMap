@@ -5,11 +5,9 @@ import android.content.Intent
 import android.location.Address
 import android.location.Geocoder
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.widget.EditText
 import com.google.android.gms.maps.model.LatLng
-import kotlinx.android.synthetic.main.activity_fillin_form.*
 import kotlinx.android.synthetic.main.content_fillin_form.*
 import org.jetbrains.anko.toast
 import java.io.IOException
@@ -54,8 +52,8 @@ class FillinForm : AppCompatActivity() {
 
             //location 2
             i.putExtra("name2", locationName2)
-            i.putExtra("lat2", coordinates2?.latitude.toString() )
-            i.putExtra("long2", coordinates2?.longitude.toString() )
+            i.putExtra("lat2", coordinates2?.latitude.toString())
+            i.putExtra("long2", coordinates2?.longitude.toString())
 
             //location 3
             i.putExtra("name3", locationName3)
@@ -63,7 +61,7 @@ class FillinForm : AppCompatActivity() {
             i.putExtra("long3", coordinates3?.longitude.toString())
 
 //            if (locationName == null|| locationName2 == null || locationName3 ==null) {
-            if (!checkTextLength(edLocationName) || !checkTextLength(edLocationName2)|| !checkTextLength(edLocationName3))
+            if (!checkTextLength(edLocationName) || !checkTextLength(edLocationName2) || !checkTextLength(edLocationName3))
                 toast("Fields cannot be empty!")
             else
                 startActivity(i)

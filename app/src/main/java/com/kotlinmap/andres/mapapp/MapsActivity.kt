@@ -28,12 +28,28 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         bShare.setOnClickListener {
             toast("share")
-//            val shot = HiddenShot.getInstance().buildShot(this)
-//            HiddenShot.getInstance().saveShot(this, shot, "view");
+            val momBornIn = intent.getStringExtra("name")
+            val dadBornIn = intent.getStringExtra("name2")
+            val iWasBornIn = intent.getStringExtra("name3")
 
+            //remove empty space
+            val urlMomBornIn = momBornIn.replace(" ", "_");
+            val urlDadBornIn = dadBornIn.replace(" ", "_");
+            val urlIWasBornIn = iWasBornIn.replace(" ", "_");
 
+            val shareIntent = Intent()
+            shareIntent.action = Intent.ACTION_SEND
+            shareIntent.type = "text/plain"
+            shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Sharing born locations")
+            shareIntent.putExtra(android.content.Intent.EXTRA_TEXT,
+                    "Mom born in: " + momBornIn + ", https://en.wikipedia.org/wiki/" + urlMomBornIn
+                            + " Dad born in: " + dadBornIn + ", https://en.wikipedia.org/wiki/" + urlDadBornIn
+                            + " I was born in: " + iWasBornIn + ", https://en.wikipedia.org/wiki/" + urlIWasBornIn
+                            + "\n\n"
+                            + "download our app from this link"
+                            + "https://play.google.com/app/");
+            startActivity(Intent.createChooser(shareIntent, "share via"))
         }
-
     }
 
     /**
