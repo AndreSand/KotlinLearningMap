@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">wasBornin</string>
-    <string name="title_activity_maps">wasBornin Map</string>
-    <string name="title_activity_fillin_form">wasBornin</string>
+    <string name="app_name">BornIn</string>
+    <string name="title_activity_maps">BornIn Map</string>
+    <string name="title_activity_fillin_form">BornIn</string>
 </resources>
