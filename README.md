@@ -16,6 +16,12 @@ Using Android Studio 3.0, Kotlin, and gradle 4.0
 - Kotlin and Anko
 - Geocoder (gets lat and long location from address) example: val SF = LatLng(37.773972, -122.431297)
 
+## Publish apk
+1. In build.gradlew update versionCode and versionName
+2. ```./gradlew clean build``` 
+3. Generates signed apk (/app/build/outputs/apk/release)
+4. Upload apk [Google Dev Console](https://play.google.com/apps/publish/) 
+
 ## Resources
 map kotlin tutorial:
 https://www.mytrendin.com/draw-route-two-locations-google-maps-using-kotlin-android/

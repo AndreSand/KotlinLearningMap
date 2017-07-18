@@ -8,11 +8,11 @@ android {
     compileSdkVersion 26
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.kotlinmap.andres.mapapp"
+        applicationId "com.bornin.androidapp"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 3
-        versionName "1.2"
+        versionCode 1
+        versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
