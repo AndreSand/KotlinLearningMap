@@ -1,6 +1,7 @@
 package com.kotlinmap.andres.mapapp
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -98,10 +99,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         //on maeker click opens new activity
         mMap.setOnMarkerClickListener(object : GoogleMap.OnMarkerClickListener {
             override fun onMarkerClick(marker: Marker): Boolean {
-                val i = Intent(this@MapsActivity, FillinForm::class.java)
-                // i.putExtra("name", "andres")
-                startActivity(i)
-                return false //true don't show  marker title
+//                val i = Intent(this@MapsActivity, FillinForm::class.java)
+//                startActivity(i)
+//                return false //true don't show  marker title
+                val uri = Uri.parse("https://en.wikipedia.org/wiki/" + marker.title)
+                val intent = Intent(Intent.ACTION_VIEW, uri)
+                startActivity(intent)
+                return false
             }
         })
 
