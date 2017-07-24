@@ -48,7 +48,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                             + " I was born in: " + iWasBornIn + ", https://en.wikipedia.org/wiki/" + urlIWasBornIn
                             + "\n\n"
                             + "download our app from this link"
-                            + "https://play.google.com/app/");
+                            + "https://play.google.com/store/apps/details?id=com.bornin.androidapp");
             startActivity(Intent.createChooser(shareIntent, "share via"))
         }
     }
