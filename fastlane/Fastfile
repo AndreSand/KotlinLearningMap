@@ -25,14 +25,9 @@ platform :android do
     gradle(task: "test")
   end
 
-  desc "Submit a new Beta Build to Crashlytics Beta"
-  lane :beta do
-    gradle(task: "assembleRelease")
-    crashlytics
-
     # sh "your_script.sh"
     # You can also use other beta testing services here
-  end
+
 
   desc "Deploy a new version to the Google Play"
   lane :deploy do
@@ -44,6 +39,33 @@ lane :playstore do
   gradle(
     task: 'assemble',
     build_type: 'Release'
+  )
+end
+
+#
+#beta release
+#
+lane :beta do
+  gradle(task: 'assemble', build_type: 'Release')
+  supply(track: 'beta')
+end
+
+#
+#alpha release
+#
+lane :alpha do
+  gradle(task: 'assemble', build_type: 'Release')
+  supply(track: 'alpha')
+end
+
+#
+#rollout release
+#
+lane :rollout  do
+  # ...
+  supply(
+    track: 'rollout',
+    rollout: '0.5'
   )
 end
 
@@ -69,5 +91,5 @@ end
 # More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
 # All available actions: https://docs.fastlane.tools/actions
 
-# fastlane reports which actions are used. No personal data is recorded. 
+# fastlane reports which actions are used. No personal data is recorded.
 # Learn more at https://github.com/fastlane/fastlane#metrics
