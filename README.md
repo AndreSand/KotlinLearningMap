@@ -40,3 +40,16 @@ http://www.androhub.com/take-a-screenshot-programmatically-in-android/
 
 material colors:
 https://material.io/guidelines/style/color.html#color-color-palette
+
+## Publish to Beta, then promote to Beta -> Release
+Using gradle-play-publisher plugin:
+1. update versionCode and versionName
+2. $./gradlew publishApkRelease
+[gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher#google-play-service-account)
+[codepath tutorial](https://github.com/codepath/android_guides/wiki/Automating-Publishing-to-the-Play-Store)
+
+Using fastlane
+1. update versionCode and versionName
+2. $fastlane alpha
+[fastlane](https://medium.com/quark-works/how-i-increased-my-productivity-during-deployments-using-fastlane-9e30301f41ed)
+
