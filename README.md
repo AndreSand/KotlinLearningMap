@@ -53,3 +53,6 @@ Using fastlane
 2. $fastlane alpha
 [fastlane](https://medium.com/quark-works/how-i-increased-my-productivity-during-deployments-using-fastlane-9e30301f41ed)
 
+## Testing: Integrate reporting with codecov.io
+[codecov](https://codecov.io/gh/AndreSand/KotlinLearningMap)
+upload token cf25376c-9432-4b0b-9989-5048288f8675
