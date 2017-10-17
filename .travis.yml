@@ -8,6 +8,6 @@ android:
     - android-26
 
 script:
-   - ./gradlew build connectedCheck
+   - ./gradlew connectedCheck
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t cf25376c-9432-4b0b-9989-5048288f8675
