@@ -1,0 +1,1 @@
+bash <(curl -s https://codecov.io/bash) -t cf25376c-9432-4b0b-9989-5048288f8675
