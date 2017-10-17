@@ -1,27 +1,27 @@
-#language: android
-#android:
-#  components:
-#    - tools # to get the new `repository-11.xml`
-#    - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943)
-#    - platform-tools
-#    - build-tools-26.0.1
-#    - android-26
-#
+language: android
+android:
+  components:
+    - tools # to get the new `repository-11.xml`
+    - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943)
+    - platform-tools
+    - build-tools-26.0.1
+    - android-26
+
 #script:
 #   - ./gradlew connectedCheck
 #after_success:
 #  - bash <(curl -s https://codecov.io/bash) -t cf25376c-9432-4b0b-9989-5048288f8675
 
-language: android
-
-android:
-  components:
-    - tools
-    - platform-tools
-    - build-tools-23.0.3
-    - android-23
-    - extra-android-m2repository
-    - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
+#language: android
+#
+#android:
+#  components:
+#    - tools
+#    - platform-tools
+#    - build-tools-23.0.3
+#    - android-23
+#    - extra-android-m2repository
+#    - sys-img-${ANDROID_ABI}-${ANDROID_TARGET}
 
 script:
     - ./gradlew clean
@@ -33,4 +33,4 @@ script:
 #    - ./gradlew connectedCheck
 
 after_success:
-    - bash <(curl -s https://codecov.io/bash) 
+    - bash <(curl -s https://codecov.io/bash)
