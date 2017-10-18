@@ -14,7 +14,7 @@ android {
 //    }
 
     compileSdkVersion 26
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '26.0.1'
     defaultConfig {
         applicationId "com.bornin.androidapp"
         minSdkVersion 19
