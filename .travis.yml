@@ -36,7 +36,7 @@ android:
         - android-23
 
 script:
-   - bash gradlew test jacocoTestReport
+   - ./gradlew jacocoTestReport
 
 
 after_success:
