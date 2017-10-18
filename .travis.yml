@@ -5,8 +5,8 @@ android:
         - platform-tools
         - android-23
 
-        script:
-            bash gradlew test jacocoTestReport
+    script:
+    - bash gradlew test jacocoTestReport
 
 
 after_success:
