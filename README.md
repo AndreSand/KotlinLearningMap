@@ -56,3 +56,5 @@ Using fastlane
 ## Testing: Integrate reporting with codecov.io
 [codecov](https://codecov.io/gh/AndreSand/KotlinLearningMap)
 upload token cf25376c-9432-4b0b-9989-5048288f8675
+
+[testing tutorial](http://kuzzle.io/blog/2016/03/tips-to-use-travis-on-an-android-environment)
