@@ -1,7 +1,7 @@
 language: android
 #jdk: oraclejdk7
 ## Use the Travis Container-Based Infrastructure
-#sudo: false
+sudo: false
 #
 #cache:
 #  directories:
@@ -41,6 +41,8 @@ android:
 
 before_script:
   # Create and start emulator
+  - android list targets
+    - jdk_switcher use oraclejdk8
   - echo no | android create avd --force -n test -t "android-"$EMULATOR_API_LEVEL --abi $ANDROID_ABI --tag $ANDROID_TAG
   - emulator -avd test -no-skin -no-audio -no-window &
   - android-wait-for-emulator
