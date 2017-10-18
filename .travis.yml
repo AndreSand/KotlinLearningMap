@@ -1,12 +1,12 @@
 language: android
 #jdk: oraclejdk7
-# Use the Travis Container-Based Infrastructure
-sudo: false
-
-cache:
-  directories:
-    - ${TRAVIS_BUILD_DIR}/gradle/caches/
-    - ${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/
+## Use the Travis Container-Based Infrastructure
+#sudo: false
+#
+#cache:
+#  directories:
+#    - ${TRAVIS_BUILD_DIR}/gradle/caches/
+#    - ${TRAVIS_BUILD_DIR}/gradle/wrapper/dists/
 
 env:
   global:
@@ -31,10 +31,10 @@ android:
     # Google Play Services
     - extra-google-google_play_services
     # Support library
-    - extra-android-support
+#    - extra-android-support
     # Latest artifacts in local repository
-    - extra-google-m2repository
-    - extra-android-m2repository
+#    - extra-google-m2repository
+#    - extra-android-m2repository
     # Specify at least one system image
     - sys-img-armeabi-v7a-google_apis-$ANDROID_API_LEVEL
     - sys-img-armeabi-v7a-google_apis-$EMULATOR_API_LEVEL
