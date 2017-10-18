@@ -23,7 +23,7 @@ class FillinForm : AppCompatActivity() {
 //            vibrator.vibrate(200)
 //            toast("Wifi is disabled. Please turn on!")
 //        }
-
+        println(getHelloWorld())
 
         btGoToMap.setOnClickListener {
             //Get location1
@@ -75,6 +75,8 @@ class FillinForm : AppCompatActivity() {
 
 
     }
+
+    fun getHelloWorld() = "Hello World!"
 
     fun checkTextLength(editText: EditText): Boolean {
         var length = editText.length()
