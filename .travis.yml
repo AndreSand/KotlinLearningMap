@@ -28,12 +28,11 @@
 language: android
 android:
     components:
+        - tools
         - build-tools-26.0.1
         - android-26
         - tools
-        - build-tools-23.0.1
         - platform-tools
-        - android-23
 
 script:
    - ./gradlew jacocoTestReport
