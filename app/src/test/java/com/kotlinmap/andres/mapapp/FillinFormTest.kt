@@ -12,14 +12,16 @@ import org.mockito.Mockito.mock
  */
 
 class FillinFormTest {
-//    var db = mock(FillinForm::class.java)
+    //    var db = mock(FillinForm::class.java)
 //    private val db: FillinForm = mock(FillinForm::class.java)
-@Test
-@Throws(Exception::class)
-fun testMockedHelloWorld() {
-    val mockedUtils = mock(FillinForm::class.java)
-    `when`(mockedUtils.getHelloWorld()).thenReturn("Hello mocked world!")
-    val helloWorld = mockedUtils.getHelloWorld()
-    assertEquals("Hello mocked world!", helloWorld)
-}
+    @Test
+    @Throws(Exception::class)
+    fun testMockedHelloWorld() {
+        val mockedUtils = mock(FillinForm::class.java)
+        `when`(mockedUtils.getHelloWorld()).thenReturn("Hello mocked world!")
+        val helloWorld = mockedUtils.getHelloWorld()
+        assertEquals("Hello mocked world!", helloWorld)
+    }
+
+
 }

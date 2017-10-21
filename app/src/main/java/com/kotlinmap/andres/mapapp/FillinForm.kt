@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.content_fillin_form.*
 import org.jetbrains.anko.toast
 import java.io.IOException
 
-class FillinForm : AppCompatActivity() {
+open class FillinForm : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
