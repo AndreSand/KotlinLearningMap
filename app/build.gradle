@@ -6,12 +6,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'jacoco-android'
 
 android {
-    playAccountConfigs {
-        defaultAccountConfig {
-            serviceAccountEmail = "mymapapp-gradle-release@api-7285672962128655255-471651.iam.gserviceaccount.com"
-            //pk12File = file(p12_KEY)
-        }
-    }
+//    playAccountConfigs {
+//        defaultAccountConfig {
+//            serviceAccountEmail = "mymapapp-gradle-release@api-7285672962128655255-471651.iam.gserviceaccount.com"
+//            //pk12File = file(p12_KEY)
+//        }
+//    }
 
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
@@ -22,14 +22,14 @@ android {
         versionCode 28
         versionName "1.28"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        playAccountConfig = playAccountConfigs.defaultAccountConfig
+//        playAccountConfig = playAccountConfigs.defaultAccountConfig
     }
 
-    play {
-        track = 'alpha' // or 'rollout' or 'beta' or 'alpha' or 'production'
-        untrackOld = true // will untrack 'alpha' while upload to 'beta'
-//      userFraction = 0.2 // only necessary for 'rollout', in this case default is 0.1 (10% of the target)
-    }
+//    play {
+//        track = 'alpha' // or 'rollout' or 'beta' or 'alpha' or 'production'
+//        untrackOld = true // will untrack 'alpha' while upload to 'beta'
+////      userFraction = 0.2 // only necessary for 'rollout', in this case default is 0.1 (10% of the target)
+//    }
 
     signingConfigs {
 //        release {
