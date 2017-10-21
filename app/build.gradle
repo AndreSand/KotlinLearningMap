@@ -9,7 +9,7 @@ android {
     playAccountConfigs {
         defaultAccountConfig {
             serviceAccountEmail = "mymapapp-gradle-release@api-7285672962128655255-471651.iam.gserviceaccount.com"
-            pk12File = file(p12_KEY)
+            //pk12File = file(p12_KEY)
         }
     }
 
