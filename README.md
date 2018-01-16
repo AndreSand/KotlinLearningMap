@@ -41,7 +41,7 @@ http://www.androhub.com/take-a-screenshot-programmatically-in-android/
 material colors:
 https://material.io/guidelines/style/color.html#color-color-palette
 
-## Publish to Beta, then promote to Beta -> Release
+## Publish to Beta, then promote to Beta -> [Release](https://play.google.com/apps/publish/?account=7285672962128655255#ManageReleasesPlace:p=com.bornin.androidapp)
 Using gradle-play-publisher plugin:
 1. update versionCode and versionName
 2. $./gradlew publishApkRelease
